@@ -1,5 +1,5 @@
 
-# Linux Terminal Commands AI1
+# Linux Terminal Commands
 
 ## OS
 
@@ -80,6 +80,24 @@
   cat ./inhere6/fjEkweorWp
   cda2b8470407afa9f957d02671a58de9 
   ```
+- **That's a lot of words!**
+
+  ```bash
+  ssh os_revision007@10.13.37.10
+  os_revision007
+  ls
+  cat os.revision.007.flag | grep hornstone
+  hornstone 75b7f8e0279151b85d31ca258b4a7f06 
+
+  ```
+
+- **What the wget?**
+
+  ```bash
+  ls 
+  find / -name \*.7z
+
+  ```
 
 ## Network Administration
 
@@ -115,15 +133,20 @@
   ```bash
   6fa1b41f5a40b34ca707c6d36a231d79
   ```
-
 - **secret.001**
 
   ```bash
-  secret 1
+  Unkown
   ```
 
-- **Secret.002**
+- **secret.002**
 
   ```bash
-  secret 2
+  2ce7e1ecd7c927681fe302f1e4bd3371
+  ```
+
+- **Secret.003**
+
+  ```bash
+  e6426f62f9cefe09140847daebc55205
   ```
