@@ -169,3 +169,13 @@
   ```bash
   03b0cfc0e6a42c09c567184990aeaa9c
   ```
+
+- **challenge.000.000**
+
+  ```bash
+  find / -type f -size +50c -size -60c | grep flag
+  cat /lusr/local/share/obsolete_libs/W344gweSDl.flag
+  THE SECRET FLAG IS 0a5f5a226877af1941a1dcbba1c2af2a
+  ```
+
+
