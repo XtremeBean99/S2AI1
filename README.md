@@ -96,7 +96,19 @@
   ```bash
   ls 
   find / -name \*.7z
+  wget http://10.13.37.10/secret.flag.7z
+  7za e secret.flag.7z -p99647cd064647295fb2b3ff0d4904115
+  cat secret.flag
+  a690b51cf7fa8ebaa7f733a334648e20
+  ```
 
+- **strings that matter the most?**
+
+  ```bash
+  ls 
+  cat secret
+  ./ secret 6fa1b41f5a40b34ca707c6d36a231d79
+  CTF Flag: ae87a47a1b8a6eb58843ce6967ab201f
   ```
 
 ## Network Administration
@@ -150,4 +162,10 @@
 
   ```bash
   e6426f62f9cefe09140847daebc55205
+  ```
+
+- **challenge.000.000**
+
+  ```bash
+  03b0cfc0e6a42c09c567184990aeaa9c
   ```
