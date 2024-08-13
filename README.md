@@ -163,10 +163,17 @@
   Flag: f1223c77990ca35199cb998259d7358a
   ```
 
-- **Example**
+- **Connect static routed network**
 
   ```bash
-  ls
+  /reverse-ctf.sh 10.13.37.57
+  937fa2856b905a26fc4e1ed17233f9fb
+  ```
+- **Two networks; one router**
+
+  ```bash
+  /reverse-ctf.sh 10.13.37.57
+  937fa2856b905a26fc4e1ed17233f9fb
   ```
 
 ## Secret
