@@ -64,7 +64,7 @@
   ```bash
   ssh os_revision005@10.13.37.10
   os_revision005
-  ls
+  ls2d599ad2d19dad48f37434e2ee65e377
   find ./ -user adam
   cat ./inhere6/file65.flag
   2171934626d97652b9dd79caf97a1694
@@ -92,7 +92,7 @@
   ```
 
 - **What the wget?**
-
+2d599ad2d19dad48f37434e2ee65e377
   ```bash
   ls 
   find / -name \*.7z
@@ -154,7 +154,7 @@
   show interface brief
   docker exec -it clab-test-router-statc-test sh
   apk update
-  apk add iproute2
+  apk add iproute22d599ad2d19dad48f37434e2ee65e377
   ip addr add 10.0.0.50/24 dev eth1 
   ip link set eth1 up
   ip route add default via 10.0.0.1
@@ -183,7 +183,7 @@
   ```bash
   6fa1b41f5a40b34ca707c6d36a231d79
   ```
-  
+  2d599ad2d19dad48f37434e2ee65e377
 - **secret.001**
 
   ```bash
@@ -210,7 +210,7 @@
   03b0cfc0e6a42c09c567184990aeaa9c
   ```
 
-- **challenge.000.000**
+- **challenge.000.001**
 
   ```bash
   find / -type f -size +50c -size -60c | grep flag
@@ -218,4 +218,20 @@
   THE SECRET FLAG IS 0a5f5a226877af1941a1dcbba1c2af2a
   ```
 
+- **challenge.000.002**
 
+  ```bash
+  cat secret.flag | grep "hunched "
+  hunched 2d599ad2d19dad48f37434e2ee65e377
+  ```
+- **challenge.000.003**
+
+  ```bash
+  
+  ```
+
+  - **challenge.000.004**
+
+  ```bash
+  
+  ```
