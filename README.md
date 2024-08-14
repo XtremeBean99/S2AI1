@@ -182,7 +182,6 @@
 
   ```bash
   6fa1b41f5a40b34ca707c6d36a231d79
-  2d599ad2d19dad48f37434e2ee65e377
   ```
 - **secret.001**
 
