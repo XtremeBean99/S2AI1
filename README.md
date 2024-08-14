@@ -202,6 +202,17 @@
   e6426f62f9cefe09140847daebc55205
   ```
 
+- **Secret.004**
+
+  ```bash
+  027eac9a94926df213c3bf01c9b71832
+  ```
+  - **Secret.005**
+
+  ```bash
+  example
+  ```
+
 ## Challenges
 
 - **challenge.000.000**
