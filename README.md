@@ -237,10 +237,16 @@
 - **challenge.000.003**
 
   ```bash
-  
+  9dd368744a1f1c09753e435434d51326
   ```
 
-  - **challenge.000.004**
+- **challenge.000.004**
+
+  ```bash
+  bdbd9e2b898a31807eefbdbf1137b66f
+  ```
+
+- **challenge.000.005**
 
   ```bash
   
