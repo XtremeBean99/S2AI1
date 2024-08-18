@@ -166,12 +166,14 @@
 - **Connect static routed network**
 
   ```bash
+  follwed setup instructions as per github cookbook
   /reverse-ctf.sh 10.13.37.57
   937fa2856b905a26fc4e1ed17233f9fb
   ```
 - **Two networks; one router**
 
   ```bash
+  follwed setup instructions as per github cookbook
   /reverse-ctf.sh 10.13.37.57
   937fa2856b905a26fc4e1ed17233f9fb
   ```
