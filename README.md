@@ -118,6 +118,15 @@
   ```bash
   mkdir linuxwork
   vim topology.yml
+  name: reverse_ctf_tester
+  topology:
+    nodes:
+      test:
+        kind: linux
+        image: reverse-ctf-server
+        ports:
+          - "2222:22/tcp"
+  :wq
   sudo containerlab deploy -t topology.yml
   ip a s
   ssh networking000@10.13.37.10
@@ -154,7 +163,7 @@
   show interface brief
   docker exec -it clab-test-router-statc-test sh
   apk update
-  apk add iproute22d599ad2d19dad48f37434e2ee65e377
+  apk add iproute
   ip addr add 10.0.0.50/24 dev eth1 
   ip link set eth1 up
   ip route add default via 10.0.0.1
@@ -163,17 +172,57 @@
   Flag: f1223c77990ca35199cb998259d7358a
   ```
 
-- **Connect static routed network**
-
-  ```bash
-  follwed setup instructions as per github cookbook
-  /reverse-ctf.sh 10.13.37.57
-  937fa2856b905a26fc4e1ed17233f9fb
-  ```
 - **Two networks; one router**
 
   ```bash
   follwed setup instructions as per github cookbook
+  vim topology.yml
+  name: test-router-static
+  topology:
+    nodes:
+      r1:
+        kind: linux
+        image: frrouting/frr:latest
+  
+      workstation1:
+        kind: linux
+        image: alpine:latest
+  
+      test:
+        kind: linux
+        image: reverse-ctf-server
+        ports:
+          - "2222:22/tcp"
+    links: 
+      - endpoints: ['r1:eth1', 'test:eth1']
+      - endpoints: ['r1:eth2', 'workstation1:eth1']
+  :wq
+  sudo containerlab deploy -t topology.yml
+  sudo docker exec -it clab-test-router-static-r1 vtysh
+  interface eth1
+  ip address 10.0.0.1/24
+  interface eth2
+  ip address 10.0.1.1/24
+  end
+  write memory
+  exit
+  sudo docker exec -it clab-test-router-static-test sh
+  apk update
+  apk add iproute2
+  ip addr add 10.0.0.50/24 dev eth1 
+  ip link set eth1 up
+  ip route del default via 172.20.20.1 dev eth0
+  ip route add default via 10.0.0.1 dev eth1 metric 100
+  ip route add default via 172.20.20.1 dev eth0 metric 200
+  sudo docker exec -it clab-test-router-static-workstation1 sh
+  apk update
+  apk add iproute2
+  ip addr add 10.0.1.50/24 dev eth1 
+  ip link set eth1 up
+  ip route del default via  172.20.20.1 dev eth0
+  ip route add default via 10.0.1.1 dev eth1 metric 100
+  ip route add default via 172.20.20.1 dev eth0 metric 200
+  
   /reverse-ctf.sh 10.13.37.57
   937fa2856b905a26fc4e1ed17233f9fb
   ```
@@ -208,10 +257,10 @@
   ```bash
   027eac9a94926df213c3bf01c9b71832
   ```
-  - **Secret.005**
+- **Secret.005**
 
   ```bash
-  example
+  unkown
   ```
 
 ## Challenges
@@ -239,12 +288,57 @@
 - **challenge.000.003**
 
   ```bash
+  vim topology.yml
+  name: reverse_ctf_tester
+  topology:
+    nodes:
+      test:
+        kind: linux
+        image: reverse-ctf-server
+        ports:
+          - "2222:22/tcp"
+  :wq
+  sudo containerlab deploy -t topology.yml
+  ip a s
+  ssh challenge.000.003@10.13.37.10
+  ./reverse-ctf.sh 10.13.37.71
   9dd368744a1f1c09753e435434d51326
   ```
 
 - **challenge.000.004**
 
   ```bash
+    vim topology.yml
+    name: test-router-static
+  topology:
+    nodes:
+      r1:
+        kind: linux
+        image: frrouting/frr:latest
+      test:
+        kind: linux
+        image: reverse-ctf-server
+        ports:
+          - "2222:22/tcp"
+    links: 
+      - endpoints: ['r1:eth1', 'test:eth1']
+  :wq
+  sudo containerlab deploy -t topology.yml
+  docker exec -it clab-test-router-static-r1 vtysh
+  configure terminal
+  interface eth1
+  ip address 10.13.36.50/24
+  end
+  write memory
+  show interface brief
+  docker exec -it clab-test-router-statc-test sh
+  apk update
+  apk add iproute
+  ip addr add 10.13.36.1/24 dev eth1 
+  ip link set eth1 up
+  ip route add default via 10.13.36.50
+  ssh networking001@10.13.37.10
+  ./reverse-ctf.sh 10.13.37.57
   bdbd9e2b898a31807eefbdbf1137b66f
   ```
 
@@ -253,3 +347,5 @@
   ```bash
   027eac9a94926df213c3bf01c9b71832
   ```
+
+22d599ad2d19dad48f37434e2ee65e377
