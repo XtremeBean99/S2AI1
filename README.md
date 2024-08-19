@@ -247,7 +247,7 @@
 - **secret.001**
 
   ```bash
-  Unkown
+  unknown
   ```
 
 - **secret.002**
@@ -270,7 +270,7 @@
 - **Secret.005**
 
   ```bash
-  unkown
+  unknown
   ```
 
 ## Challenges
@@ -302,7 +302,7 @@
   ```bash
   ssh challenge.000.002@10.13.37.10
   challenge.000.002
-  cat secret.flag | grep "hunched "
+  cat secret.flag | grep "hunched"
   hunched 2d599ad2d19dad48f37434e2ee65e377
   ```
 - **challenge.000.003**
@@ -331,8 +331,8 @@
 - **challenge.000.004**
 
   ```bash
-    vim topology.yml
-    name: test-router-static
+  vim topology.yml
+  name: test-router-static
   topology:
     nodes:
       r1:
@@ -372,7 +372,7 @@
 - **challenge.000.005**
 
   ```bash
-   vim topology.yml
+  vim topology.yml
   name: test-router-static
   topology:
     nodes:
