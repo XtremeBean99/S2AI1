@@ -268,12 +268,20 @@
 - **challenge.000.000**
 
   ```bash
+  ssh challenge.000.000@10.13.37.10
+  challenge.000.000
+  ls
+  cd inhere
+  ls -la
+  cat .secret
   03b0cfc0e6a42c09c567184990aeaa9c
   ```
 
 - **challenge.000.001**
 
   ```bash
+  ssh challenge.000.001@10.13.37.10
+  challenge.000.001
   find / -type f -size +50c -size -60c | grep flag
   cat /lusr/local/share/obsolete_libs/W344gweSDl.flag
   THE SECRET FLAG IS 0a5f5a226877af1941a1dcbba1c2af2a
@@ -282,6 +290,8 @@
 - **challenge.000.002**
 
   ```bash
+  ssh challenge.000.002@10.13.37.10
+  challenge.000.002
   cat secret.flag | grep "hunched "
   hunched 2d599ad2d19dad48f37434e2ee65e377
   ```
@@ -301,6 +311,7 @@
   sudo containerlab deploy -t topology.yml
   ip a s
   ssh challenge.000.003@10.13.37.10
+  challenge.000.003
   ./reverse-ctf.sh 10.13.37.71
   9dd368744a1f1c09753e435434d51326
   ```
@@ -337,7 +348,8 @@
   ip addr add 10.13.36.1/24 dev eth1 
   ip link set eth1 up
   ip route add default via 10.13.36.50
-  ssh networking001@10.13.37.10
+  ssh challenge.000.004@10.13.37.10
+  challenge.000.004
   ./reverse-ctf.sh 10.13.37.57
   bdbd9e2b898a31807eefbdbf1137b66f
   ```
