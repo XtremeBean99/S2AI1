@@ -276,6 +276,12 @@
   ```bash
   fa671cd606f8ddc1c23dd0ca1dd7c59e
   ```
+- **secret.008**
+  ```bash
+  curl 10.0.0.223/secret.flag
+  7dbcc0a0d005ef14acc3d5017f6c5812
+  ```
+  
 - **mystery secret**
   ```bash
   2ef3c122664c6f64f33b8cab58d1f630
@@ -455,10 +461,22 @@
 ## Networking Tools
   - **nmap.000**
     ```bash
+    
     ip a
     10.0.0.10
     ```
   - **nmap.001**
   ```bash
+  ssh testuser@10.13.37.10 -p 10000
+  nmap 10.0.0.0/24
+  ssh testuser@10.0.0.100 -p 22
+  cat secret.flag
   79d3e22235788332396c80bf0f0f86b6
+  ```
+  - **nmap.002**
+  ```bash
+  ssh testuser@10.13.37.10 -p 10000
+  nmap 10.0.0.0/24
+  curl 10.0.0.223
+  2ee630a3edf7208e8439c0a8c7b0cf2f
   ```
