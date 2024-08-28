@@ -272,9 +272,13 @@
   ```bash
   unknown
   ```
--**secret.006**
+- **secret.006**
   ```bash
   fa671cd606f8ddc1c23dd0ca1dd7c59e
+  ```
+- **mystery secret**
+  ```bash
+  2ef3c122664c6f64f33b8cab58d1f630
   ```
 
 ## Challenges
@@ -448,13 +452,13 @@
   027eac9a94926df213c3bf01c9b71832
   ```
 
-##Networking Tools
-  -**nmap.000**
+## Networking Tools
+  - **nmap.000**
     ```bash
     ip a
     10.0.0.10
     ```
--**nmap.000**
-```bash
-S
-```
+  - **nmap.001**
+  ```bash
+  79d3e22235788332396c80bf0f0f86b6
+  ```
