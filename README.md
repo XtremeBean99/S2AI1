@@ -272,6 +272,10 @@
   ```bash
   unknown
   ```
+-**secret.006**
+  ```bash
+  fa671cd606f8ddc1c23dd0ca1dd7c59e
+  ```
 
 ## Challenges
 
@@ -443,3 +447,14 @@
   /reverse-ctf.sh 10.13.37.57
   027eac9a94926df213c3bf01c9b71832
   ```
+
+##Networking Tools
+  -**nmap.000**
+    ```bash
+    ip a
+    10.0.0.10
+    ```
+-**nmap.000**
+```bash
+S
+```
