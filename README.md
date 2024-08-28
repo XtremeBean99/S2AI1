@@ -281,8 +281,17 @@
   curl 10.0.0.223/secret.flag
   7dbcc0a0d005ef14acc3d5017f6c5812
   ```
+- **secret.009**
+  ```bash
+
+  ```
   
-- **mystery secret**
+- **secret.0010**
+  ```bash
+  58681A5174BDC71CDFC9E79B8F8672C3
+  ```
+  
+- **secret.011**
   ```bash
   2ef3c122664c6f64f33b8cab58d1f630
   ```
