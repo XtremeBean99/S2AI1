@@ -247,7 +247,7 @@
 - **secret.001**
 
   ```bash
-  unknown
+  8f466d07332b4a1476751977005463ea
   ```
 
 - **secret.002**
@@ -273,25 +273,37 @@
   unknown
   ```
 - **secret.006**
+  
   ```bash
   fa671cd606f8ddc1c23dd0ca1dd7c59e
   ```
+  
+- **secret.007**
+  
+  ```bash
+  d10be7c70c757544f76cdc3714bd5fdd
+  ```
+  
 - **secret.008**
+  
   ```bash
   curl 10.0.0.223/secret.flag
   7dbcc0a0d005ef14acc3d5017f6c5812
   ```
 - **secret.009**
+  
   ```bash
 
   ```
   
 - **secret.0010**
+  
   ```bash
   58681A5174BDC71CDFC9E79B8F8672C3
   ```
   
 - **secret.011**
+  
   ```bash
   2ef3c122664c6f64f33b8cab58d1f630
   ```
